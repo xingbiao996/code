@@ -1,7 +1,7 @@
 import cv2
 import requests
 import json
-from hyperlpr import HyperLPR_plate_recognition
+from hyperlpr import *
 import time
 
 # 读取配置文件
@@ -14,7 +14,7 @@ def load_camera_config(config_file):
 # 主函数
 def main():
     # 加载摄像头配置
-    cameras = load_camera_config('camera_config.json')
+    cameras = load_camera_config('./camera_config.json')
     
     # 循环处理每个摄像头
     for camera in cameras:
